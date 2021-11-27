@@ -1,0 +1,17 @@
+﻿@model List<Manager>
+
+@{
+    ViewData["Title"] = "Managers";
+}
+
+<div> 
+    <ul>
+         @foreach(var manager in Model)
+    {
+        
+        <li>Welcome @manager.FullName</li>
+    }
+    </ul>
+   
+    
+</div>

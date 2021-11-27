@@ -1,0 +1,69 @@
+﻿@model List<TimeSheetEntry>
+
+@{
+    ViewData["Title"] = "Approve time";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        Employee Name
+                    </th>
+                    <th>
+                        Employee Id
+                    </th>
+                    <th>
+                        Work Date
+                    </th>
+                    <th>
+                        Work Order
+                    </th>
+                    <th>
+                        Start Time
+                    </th>
+                    <th>
+                        End Time
+                    </th>
+
+                    <th>
+                        Approve
+                    </th>
+
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var entry in Model)
+                {
+                    <tr>
+                        <td>
+                            @entry.EmployeeName
+                        </td>
+                        <td>
+                            @entry.EmployeeId
+                        </td>
+                        <td>
+                            @entry.WorkDate
+                        </td>
+                        <td>
+                            @entry.WorkOrder
+                        </td>
+                        <td>
+                            @entry.StartTime
+                        </td>
+                        <td>
+                            @entry.EndTime
+                        </td>
+
+                        <td>
+                        </td>
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
